@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      
+      body {
+        font: 16px Arial;  
+      }
+      
+      /*the container must be positioned relative:*/
+      .autocomplete {
+        position: relative;
+        display: inline-block;
+      }
+      
+      input {
+        border: 1px solid transparent;
+        background-color: #f1f1f1;
+        padding: 10px;
+        font-size: 16px;
+      }
+      
+      input[type=text] {
+        background-color: #f1f1f1;
+        width: 100%;
+      }
+      
+      input[type=submit] {
+        background-color: DodgerBlue;
+        color: #fff;
+        cursor: pointer;
+      }
+      
+      .autocomplete-items {
+        position: absolute;
+        border: 1px solid #d4d4d4;
+        border-bottom: none;
+        border-top: none;
+        z-index: 99;
+        /*position the autocomplete items to be the same width as the container:*/
+        top: 100%;
+        left: 0;
+        right: 0;
+      }
+      
+      .autocomplete-items div {
+        padding: 10px;
+        cursor: pointer;
+        background-color: #fff; 
+        border-bottom: 1px solid #d4d4d4; 
+      }
+      
+      /*when hovering an item:*/
+      .autocomplete-items div:hover {
+        background-color: #e9e9e9; 
+      }
+      
+      /*when navigating through the items using the arrow keys:*/
+      .autocomplete-active {
+        background-color: DodgerBlue !important; 
+        color: #ffffff; 
+      }
+      </style>
+    <title>Unhelpful Searchbar</title>
+  </head>
+  <body>
+    <div class="jumbotron" style="height: 400px">
+      <h1 class="display-4">Unhelpful Searchbar</h1>
+      <p class="lead">Search for anything you want or need to know!</p>
+      <hr class="my-4">
+      <form class="form-inline my-2 my-lg-0" autocomplete="off">
+        <div class="autocomplete" style="width:300px;">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" id="myInput">
+          <button class="btn btn-outline-success my-2 my-sm-0" onclick="errorMessage()">Search</button>
+        </div>
+      </form>
+      <hr class="my-4">
+      <p class="font-weight-light">No promises you'll get a result though</p>
+    </div>
+
+    <div>
+      <div class="alert alert-secondary" style="width: 380px">
+        The most helpful search engine I've ever used!
+      </div>
+      <div class="alert alert-secondary" style="width:440px">
+        This is literally the most useful piece of technology ever!
+      </div>
+      <div class="alert alert-secondary" style="width:460px">
+        I use this every single day! So grateful to whoever made it!
+      </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <script src="script.js" type="text/javascript"></script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>
